@@ -3,6 +3,8 @@
   roles:
   # - role: base
 
+  # - role: security
+
   # - role: vitalk.secure-ssh
   #   become: yes
   #   ssh_user: "{{ ansible_ssh_user }}"
@@ -22,8 +24,8 @@
   #   ufw_packages: ["ufw"]
   #   ufw_rules:
   #     - logging: "full"
-  #     - rule: allow
-  #       name: OpenSSH
+  #     # - rule: allow
+  #     #   name: OpenSSH
   #   ufw_manage_config: true
   #   ufw_config:
   #     IPV6: "yes"
@@ -36,4 +38,5 @@
   #     IPT_MODULES: ""
 
   # - role: shell
-  - role: security
+
+  - role: profile

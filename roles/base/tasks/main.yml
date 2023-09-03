@@ -9,3 +9,5 @@
     - apache2-utils
     - sudo
     - exa
+    - nginx
+    - libnginx-mod-stream
