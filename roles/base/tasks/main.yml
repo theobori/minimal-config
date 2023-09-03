@@ -6,24 +6,6 @@
   loop:
     - curl
     - sed
-    - fish
     - apache2-utils
-    - fail2ban
     - sudo
-    - gnupg
-
-- name: Copy the GnuPG configuration file
-  ansible.builtin.copy:
-    src: .gnupg
-    dest: /home/{{ ansible_ssh_user }}/.gnupg
-    owner: "{{ ansible_ssh_user }}"
-    group: "{{ ansible_ssh_user }}"
-    force: yes
-  become_user: "{{ ansible_ssh_user }}"
-
-- name: Override the SSH daemon configuration
-  ansible.builtin.shell: |
-    sed -i \
-    's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' \
-    /etc/ssh/sshd_config
-  become: yes
+    - exa

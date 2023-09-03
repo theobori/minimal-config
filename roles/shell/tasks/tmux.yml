@@ -2,7 +2,6 @@
   ansible.builtin.package:
     name: tmux
     state: present
-  become_method: su
   become: yes
   
 - name: Check if the tmux directory exists

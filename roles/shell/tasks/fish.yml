@@ -1,3 +1,9 @@
+- name: Install fish
+  ansible.builtin.package:
+    name: fish
+    state: present
+  become: yes
+
 - name: Check if the fish configuration directory exists
   ansible.builtin.stat:
     path: $HOME/.config/fish
