@@ -7,7 +7,7 @@ alias tmux="tmux -2"
 alias tf="terraform"
 alias k="kubectl"
 
-export PATH="$PATH:/$HOME/.local/bin"
-export GPG_TTY=$(tty)
+set -g PATH "$PATH:/$HOME/.local/bin"
+set -g GPG_TTY (tty)
 
 set -g theme_color_scheme dracula
