@@ -27,6 +27,8 @@ ansible-playbook \
    main.yml
 ```
 
+*We assume you run the playbook as root*.
+
 ## ⚠️ knockd risks
 
 In this configuration, we are using `knockd` to manage the openSSH firewall (`ufw`) rules. It can be very risky. If you want to be safe you can exclude the `knockd` task by commenting the following line in [roles/security/tasks/main.yml](roles/security/tasks/main.yml):

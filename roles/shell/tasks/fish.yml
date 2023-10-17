@@ -2,7 +2,6 @@
   ansible.builtin.package:
     name: fish
     state: present
-  become: yes
 
 - name: Check if the fish configuration directory exists
   ansible.builtin.stat:
@@ -22,7 +21,7 @@
     src: ../../common/files/fish
     dest: $HOME/.config
     force: yes
-  
+
 # - name: Download oh-my-fish install script
 #   ansible.builtin.get_url:
 #     url: https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install
@@ -43,11 +42,9 @@
 - name: Set fish as the default shell for the current user
   ansible.builtin.shell: |
     usermod --shell $(which fish) {{ ansible_ssh_user }}
-  become: yes
 
 - name: Set fish as the default shell for every user
   lineinfile:
     path: /etc/default/useradd
     regexp: "SHELL="
     line: "SHELL=/usr/bin/fish"
-  become: yes

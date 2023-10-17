@@ -6,12 +6,10 @@
   - role: security
 
   - role: vitalk.secure-ssh
-    become: yes
     ssh_user: "{{ ansible_ssh_user }}"
     ssh_identity_key: "{{ ssh_identity_key_path }}"
 
   - role: nickjj.docker
-    become: yes
     tags: ["docker"]
     docker__users: [
       "{{ ansible_ssh_user }}"
@@ -19,13 +17,15 @@
     ignore_errors: yes
 
   - role: weareinteractive.ufw
-    become: yes
     ufw_enabled: true
     ufw_packages: ["ufw"]
     ufw_rules:
       - logging: "full"
       # - rule: allow
       #   name: OpenSSH
+      - rule: allow
+        name: Anywhere
+        delete: true
     ufw_manage_config: true
     ufw_config:
       IPV6: "yes"
