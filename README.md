@@ -1,4 +1,4 @@
-# 🪚 minimal-config
+# 💽 minimal-config
 
 [![ansible-lint](https://github.com/theobori/minimal-config/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/theobori/minimal-config/actions/workflows/ansible-lint.yml)
 
