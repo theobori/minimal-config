@@ -1,6 +1,8 @@
 # 🪚 minimal-config
 
-Minimal dependencies and configuration used on Debian system
+[![ansible-lint](https://github.com/theobori/minimal-config/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/theobori/minimal-config/actions/workflows/ansible-lint.yml)
+
+Minimal dependencies and configuration used on Debian system.
 
 ## 📖 How to build and run ?
 

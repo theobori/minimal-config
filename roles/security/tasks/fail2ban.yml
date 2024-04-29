@@ -7,9 +7,10 @@
   ansible.builtin.copy:
     src: fail2ban/jail.local
     dest: /etc/fail2ban
+    mode: "0644"
 
 - name: Restart service fail2ban
   ansible.builtin.service:
     name: fail2ban
     state: restarted
-    enabled: yes
+    enabled: true
