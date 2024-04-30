@@ -45,21 +45,21 @@ And then add a rule for `ufw` that allow you SSH connections.
 
 ### Roles
 
-- **`nickjj.docker`**: Setup and configure Docker + docker-compose
-- **`weareinteractive.ufw`**: Setup the firewall and configure it
-- **`base`**: Install basics needed packages for the other roles
-- **`profile`**: Setup some default configuration for new users
+- **`nickjj.docker`**: Setup and configure Docker + docker-compose.
+- **`weareinteractive.ufw`**: Setup the firewall and configure it.
+- **`base`**: Install basics needed packages for the other roles.
+- **`profile`**: Setup some default configuration for new users.
 - **`security`**: Setup system security tools/services like ssh, knockd, etc.
-- **`shell`**: Setup a shell environment with fish + tmux 
+- **`shell`**: Setup a shell environment with fish + tmux .
 
 ### Variables
 
 #### SSH
-- **`ssh_identity_key_path`**: SSH public key used to auth
-- **`ssh_port`**: Change the default SSH port
+- **`ssh_identity_key_path`**: SSH public key used to auth.
+- **`ssh_port`**: Change the default SSH port.
 
 #### Port knocking
-- **`knockd_open_ssh_seq`**: Knockd open SSH (should be encrypted)
-- **`knockd_close_ssh_seq`**: knockd close SSH (should be encrypted)
-- **`knockd_tmp_open_ssh_seq`**: Temporary open SSH (should be encrypted)
-- **`knockd_opts`**: knockd CLI arguments used by the service
+- **`knockd_open_ssh_seq`**: Knockd open SSH (should be encrypted).
+- **`knockd_close_ssh_seq`**: knockd close SSH (should be encrypted).
+- **`knockd_tmp_open_ssh_seq`**: Temporary open SSH (should be encrypted).
+- **`knockd_opts`**: knockd CLI arguments used by the service.
